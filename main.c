@@ -14,16 +14,10 @@ int main(int argc, char **argv)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	FILE *file = fopen(argv[1], "r");
 
-	if (file == NULL)
-	{
-		fprintf(stderr, "Error: Can't open file %s/n", argv[1]);
-		exit(EXIT_FAILURE);
-	}
+	const char *filename = argv[1];
 
-	char line[4096];
-	int lineNumber = 1;
+	readfile(filename);
 
 
 	return (0);
